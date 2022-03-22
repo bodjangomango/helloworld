@@ -1,0 +1,5 @@
+when HTTP_REQUEST {
+  if { [class match [HTTP::header "sec-ch-ua"] contains "Microsoft Edge"] } {
+    drop
+  }
+}
